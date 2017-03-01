@@ -4,7 +4,7 @@
 " Version:      0.9
 "
 if exists("g:loaded_stumble")
-    finish
+	finish
 endif
 let g:loaded_stumble = 1
 
@@ -16,7 +16,7 @@ let g:stumble_activities = {'':''}
 " The magic
 function! s:stumble() abort
 	let l:date = repeat(strftime("%Y-%m-%d") . ";", 3)
-    let l:fields = split(getline("."), '\t')
+	let l:fields = split(getline("."), '\t')
 
 	if len(l:fields) < 4
 		echoerr "Syntax error: need at least 4 <TAB> separated entries"
@@ -37,7 +37,7 @@ function! s:stumble() abort
 				\ "1;;;;;"
 	
 	call setline(".", l:str)
-    setlocal fileformat=dos " required by Balans
+	setlocal fileformat=dos " required by Balans
 endfunction
 
 " Bind a command
