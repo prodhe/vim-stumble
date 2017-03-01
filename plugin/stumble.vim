@@ -3,9 +3,9 @@
 " License:      This file is placed in the public domain.
 " Version:      0.9
 "
-" if exists("g:loaded_stumble")
-"     finish
-" endif
+if exists("g:loaded_stumble")
+    finish
+endif
 let g:loaded_stumble = 1
 
 " Global variables, intended to be changed in user's .vimrc
@@ -41,7 +41,7 @@ function! s:stumble() abort
 endfunction
 
 " Bind a command
-" if !exists(":Stumble")
+if !exists(":Stumble")
 	command! Stumble call <SID>stumble()
-" endif
+endif
 
