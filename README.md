@@ -11,15 +11,11 @@ into the system all at once at the end of the day.
 As of now (first version), it requires a TAB separated row of four values:
 
 1. Project
-    * Eg `99011`
 2. Activity
-    * Eg `4301`
 3. Hours
-    * Eg `0,25`
 4. Comment
-    * Eg `Daily agile team meeting`
 
-`99300	4301	0,25	Daily agile team meeting`
+`99300<TAB>4301<TAB>0,25<TAB>Daily agile team meeting`
 
 Put your cursor on the line and run `:Stumble`. Hot-key the command
 if you like. The line transforms into Balans syntax:
