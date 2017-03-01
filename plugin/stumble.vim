@@ -29,13 +29,13 @@ function! s:stumble() abort
 	let l:comment = l:fields[3]
 
 	let l:str = g:stumble_user . ";;" .
-				\ l:project . ";" .
-				\ l:date .
-				\ l:activity . ";" .
-				\ l:time . ";" . l:time . ";" .
-				\ l:comment . ";" . l:comment . ";" .
-				\ "1;;;;;"
-	
+		\ l:project . ";" .
+		\ l:date .
+		\ l:activity . ";" .
+		\ l:time . ";" . l:time . ";" .
+		\ l:comment . ";" . l:comment . ";" .
+		\ "1;;;;;"
+
 	call setline(".", l:str)
 	setlocal fileformat=dos " required by Balans
 endfunction
@@ -44,4 +44,3 @@ endfunction
 if !exists(":Stumble")
 	command! Stumble call <SID>stumble()
 endif
-
