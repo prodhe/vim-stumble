@@ -20,9 +20,11 @@ Eg: `99300<TAB>4301<TAB>0,25<TAB>Daily agile team meeting`
 Put your cursor on the line and run `:Stumble`. Hot-key the command
 if you like. The line transforms into Balans syntax:
 
-`ABCXYZ;;99300;2017-03-01;2017-03-01;2017-03-01;4301;0,25;0,25;Daily agile team meeting;Daily agile team meeting;1;;;;;`
+`ABCXYZ;99300;;2017-03-01;2017-03-01;2017-03-01;4301;0,25;0,25;Daily agile team meeting;Daily agile team meeting;1;;;;;`
 
-Save the file in ASCII and with CRLF line endings.
+The buffer will automatically switch to `fileformat=dos` as to be consistent with the requirements of Balans.
+
+Save the file and load it into Balans.
 
 ## Options for ~/.vimrc
 
