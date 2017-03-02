@@ -28,8 +28,8 @@ function! s:stumble() abort
 	let l:time = l:fields[2]
 	let l:comment = l:fields[3]
 
-	let l:str = g:stumble_user . ";;" .
-		\ l:project . ";" .
+	let l:str = g:stumble_user . ";" .
+		\ l:project . ";;" .
 		\ l:date .
 		\ l:activity . ";" .
 		\ l:time . ";" . l:time . ";" .
