@@ -9,7 +9,7 @@ endif
 let g:loaded_stumble = 1
 
 " Global variables, intended to be changed in user's .vimrc
-let g:stumble_user = "ABCXYZ"
+let g:stumble_user = ""
 let g:stumble_projects = {'':''}
 let g:stumble_activities = {'':''}
 
