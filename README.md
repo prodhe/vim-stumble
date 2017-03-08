@@ -8,21 +8,26 @@ into the system all at once at the end of the day.
 
 ## Usage
 
-As of now (first version), it requires a TAB separated row of four values:
+As of now (first version), it requires a semi-colon separated row of:
 
-1. Project
-2. Activity
-3. Hours
-4. Comment
+1. Date
+2. Project
+3. Activity
+4. Internal hours
+5. External hours
+    * Can be left blank
+6. Comment
+    * Can be left blank
 
-Eg: `99300<TAB>4301<TAB>0,25<TAB>Daily agile team meeting`
+Eg: `2017-03-08 ; 9912003 ; 4301 ; 0,25 ; ; Daily agile team meeting`
 
-Put your cursor on the line and run `:Stumble`. Hot-key the command
-if you like. The line transforms into Balans syntax:
+Put your cursor on the line, or visually select multiple rows, and run
+`:Stumble`. The line(s) transforms into Balans syntax in a new split buffer:
 
-`ABCXYZ;99300;;2017-03-01;2017-03-01;2017-03-01;4301;0,25;0,25;Daily agile team meeting;Daily agile team meeting;1;;;;;`
+`ABCXYZ;9912003;;2017-03-08;2017-03-08;2017-03-08;4301;0,25;0;Daily agile team meeting;Daily agile team meeting;1;;;;;;;`
 
-The buffer will automatically switch to `fileformat=dos` as to be consistent with the requirements of Balans.
+The buffer will automatically be set to `fileformat=dos` and
+`fileencoding=latin1` as to be consistent with the requirements of Balans.
 
 Save the file and load it into Balans.
 
@@ -33,7 +38,8 @@ Save the file and load it into Balans.
 `let g:stumble_user = "ABCXYZ"`
 
 This username will be automatically included for every row. Set it to whatever
-your login is in the live system.
+your login is in the live system. If left empty, the script will prompt you for
+a username.
 
 ## License
 
